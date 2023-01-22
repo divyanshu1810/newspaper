@@ -28,10 +28,10 @@ const Header: FunctionComponent = () => {
   ];
   return (
     <div className="fixed w-screen z-50">
-      <div className="md:text-7xl text-white text-5xl font-primary text-center py-10 bg-[#FF671F]">
+      <div className="md:text-7xl text-white text-4xl font-semibold font-primary text-center py-10 bg-[#FF671F]">
         The Indian Times
       </div>
-      <div className="border-b-4 text-[#06038D] font-semibold bg-white md:text-xs lg:text-lg py-1 border-t-2 border-black flex justify-evenly">
+      <div className="md:border-b-4 text-[#06038D] font-semibold bg-white md:text-xs lg:text-lg py-1 border-t-2 border-[#06038D] flex justify-evenly">
         <Link href="/">
           <div>DEV PUBLICATIONS</div>
         </Link>
@@ -62,7 +62,7 @@ const Header: FunctionComponent = () => {
            ${year}`}
         </div>
       </div>
-      <div className=" overflow-auto space-x-6 px-2 font-semibold border-b-4 text-[#06038D] bg-white text-md lg:text-lg py-1 border-t-2 border-black flex md:hidden">
+      <div className=" overflow-auto space-x-6 px-4 font-semibold border-b-4 text-[#06038D] bg-white text-md lg:text-lg py-1 border-[#06038D] flex md:hidden">
         <Link href="/health">
           <div className=" cursor-pointer">Health</div>
         </Link>

@@ -6,9 +6,11 @@ interface Newstype {
   title: string;
   about: string;
   author: string;
+  source: string;
 }
 const Newscards: FunctionComponent<Newstype> = ({
   image,
+  source,
   title,
   url,
   about,
@@ -16,7 +18,7 @@ const Newscards: FunctionComponent<Newstype> = ({
 }: Newstype) => {
   return (
     <Link href={url}>
-      <div className="max-w-xs rounded bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-lg drop-shadow-lg overflow-hidden shadow-lg mx-10 my-10 ">
+      <div className="max-w-xs rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-lg drop-shadow-lg overflow-hidden shadow-lg mx-10 md:my-10 mt-10">
         <div className="flex justify-center ">
           <picture>
             <img
@@ -33,6 +35,9 @@ const Newscards: FunctionComponent<Newstype> = ({
         <div className="px-6 pt-4 pb-2">
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
             {author}
+          </span>
+          <span className="inline-block bg-gray-600 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">
+            {source}
           </span>
         </div>
       </div>

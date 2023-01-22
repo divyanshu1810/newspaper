@@ -9,11 +9,12 @@ export default function Home(props: any) {
         <title>SwenPapers</title>
       </Head>
       <Header />
-      <div className="  lg:pt-48 pt-48 md:pt-44 flex justify-evenly flex-wrap bg-[#046A38]">
+      <div className="  lg:pt-48 pt-44 flex justify-evenly flex-wrap bg-[#046A38] pb-10">
         {props.news.map((element: any, index: number) => {
           return (
             <div key={index}>
               <Newscards
+                source={element.source.name}
                 author={element.author ? element.author : "Unknown"}
                 image={element.urlToImage}
                 title={
